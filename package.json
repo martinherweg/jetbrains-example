@@ -1,0 +1,246 @@
+{
+  "name": "jetbrains-sample",
+  "version": "0.0.1",
+  "description": "",
+  "authors": [
+    {
+      "name": "Martin Herweg",
+      "email": "martin@herweg.co",
+      "homepage": "https://martinherweg.de"
+    }
+  ],
+  "repository": "",
+  "proxy": "jetbrains-sample.dev",
+  "projectType": "laravel",
+  "browserslist": [
+    "last 2 versions",
+    "ie >= 10"
+  ],
+  "scripts": {
+    "dev:dashboard": "cross-env NODE_ENV=development webpack-dashboard -p 3002 -- gulp --env=browser-sync",
+    "dev": "cross-env NODE_ENV=development gulp --env=browser-sync",
+    "gulp": "cross-env NODE_ENV=development gulp",
+    "images": "cross-env NODE_ENV=development gulp move:images",
+    "init": "npm run -s init_commands && node ./scripts/createDirs.js",
+    "init_commands": "cross-env NODE_ENV=development gulp build:production --env=browserSync --changed=false && cross-env NODE_ENV=development webpack --hide-modules --config=webpack/webpack.config.babel.js",
+    "module": "node ./scripts/module",
+    "production": "cross-env NODE_ENV=production gulp build:production --env=production && cross-env NODE_ENV=production webpack --hide-modules --config=webpack/webpack.config.babel.js -p",
+    "webpack": "cross-env NODE_ENV=production webpack --hide-modules --config=webpack/webpack.config.babel.js",
+    "webpack:analyze": "webpack-bundle-analyzer webpack/stats.json dist/public/"
+  },
+  "devDependencies": {
+    "eslint-plugin-vue": "beta",
+    "vue-loader": "^12.0.4",
+    "vue-style-loader": "^3.0.1",
+    "vue-template-compiler": "^2.3.3",
+    "babel-loader": "^7.0.0",
+    "clean-webpack-plugin": "^0.1.16",
+    "copy-webpack-plugin": "^4.0.1",
+    "cross-env": "^5.0.0",
+    "css-loader": "^0.28.3",
+    "eslint-loader": "^1.6.3",
+    "extract-text-webpack-plugin": "^3.0.0",
+    "file-loader": "^0.11.1",
+    "friendly-errors-webpack-plugin": "^1.1.3",
+    "inject-loader": "^3.0.0-beta4",
+    "html-webpack-plugin": "^2.28.0",
+    "http-proxy-middleware": "^0.17.3",
+    "json-loader": "^0.5.4",
+    "lodash-webpack-plugin": "^0.11.4",
+    "node-sass": "^4.5.0",
+    "optimize-css-assets-webpack-plugin": "^3.0.0",
+    "postcss-loader": "^2.0.5",
+    "sass-loader": "^6.0.2",
+    "style-loader": "^0.18.1",
+    "stylelint-webpack-plugin": "^0.7.0",
+    "url-loader": "^0.5.7",
+    "webpack": "^3.0.0",
+    "webpack-bundle-analyzer": "^2.3.1",
+    "webpack2-polyfill-plugin": "^0.0.2",
+    "webpack-config-utils": "^2.3.0",
+    "webpack-dashboard": "^0.4.0",
+    "webpack-dev-middleware": "^1.11.0",
+    "webpack-hot-middleware": "^2.17.0",
+    "write-file-webpack-plugin": "^4.0.2",
+    "gulp": "^3.9.1",
+    "gulp-changed": "^3.1.0",
+    "gulp-cheerio": "^0.6.2",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-debug": "^3.0.0",
+    "gulp-favicons": "^2.2.7",
+    "gulp-if": "^2.0.2",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-load-plugins": "^1.4.0",
+    "gulp-notify": "^3.0.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-postcss": "^7.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.0.0",
+    "gulp-sourcemaps": "^2.6.0",
+    "gulp-stylelint": "^3.7.0",
+    "gulp-svg-sprite": "^1.3.6",
+    "gulp-watch": "^4.3.11",
+    "require-dir": "^0.3.0",
+    "run-sequence": "^2.1.0",
+    "util": "^0.10.3",
+    "yargs": "^8.0.1",
+    "stylelint": "^8.0.0",
+    "stylelint-config-sass-guidelines": "^3.0.1",
+    "stylelint-order": "^0.6.0",
+    "stylelint-scss": "^1.4.3",
+    "stylelint-selector-bem-pattern": "^1.0.0",
+    "autoprefixer": "^7.1.1",
+    "cssnano": "^3.10.0",
+    "lost": "^8.0.0",
+    "postcss-aspect-ratio": "^1.0.0",
+    "postcss-assets": "^4.1.0",
+    "postcss-flexbugs-fixes": "^3.0.0",
+    "postcss-reporter": "^4.0.0",
+    "postcss-scss": "^1.0.0",
+    "rucksack-css": "^0.9.1",
+    "family.scss": "^1.0.1",
+    "eslint": "^4.0.0",
+    "eslint-config-airbnb-base": "^11.1.0",
+    "eslint-config-defaults": "^9.0.0",
+    "eslint-formatter-pretty": "^1.1.0",
+    "eslint-friendly-formatter": "^3.0.0",
+    "eslint-import-resolver-webpack": "^0.8.3",
+    "eslint-plugin-html": "^3.0.0",
+    "eslint-plugin-import": "^2.7.0",
+    "prettier-eslint-cli": "^4.1.1",
+    "babel-cli": "^6.23.0",
+    "babel-core": "^6.23.1",
+    "babel-eslint": "^7.1.0",
+    "babel-plugin-lodash": "^3.2.11",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.4.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-polyfill": "^6.23.0",
+    "babel-register": "^6.23.0",
+    "babel-runtime": "^6.23.0",
+    "browser-sync": "^2.18.8",
+    "chalk": "^2.0.1",
+    "del": "^3.0.0",
+    "path": "^0.12.7",
+    "fs-extra": "^4.0.0",
+    "mem-fs": "^1.1.3",
+    "mem-fs-editor": "^3.0.2",
+    "inquirer": "^3.1.1"
+  },
+  "dependencies": {
+    "axios": "^0.16.1",
+    "include-media": "^1.4.9",
+    "lazysizes": "^4.0.0-rc1",
+    "lodash": "^4.16.6",
+    "modularscale-sass": "^3.0.2",
+    "svgxuse": "^1.1.23",
+    "vue": "^2.2.3",
+    "vuex": "^2.3.1",
+    "vue-router": "^2.5.3"
+  },
+  "srcPaths": {
+    "base": "src/",
+    "views": "src/views/",
+    "systemFiles": "src/systemFiles/",
+    "css": "src/scss/",
+    "fonts": "src/fonts/",
+    "js": "src/js/",
+    "favicons": "src/favicons/",
+    "images": {
+      "base": "src/images/",
+      "svg": {
+        "base": "src/images/svg/",
+        "single": "single/",
+        "sprite": "sprite/"
+      },
+      "bitmap": {
+        "cssimages": "cssimages/",
+        "htmlimages": "htmlimages/"
+      }
+    }
+  },
+  "distPaths": {
+    "base": "dist/public",
+    "views": "dist/resources/views/",
+    "systemFiles": "dist/public/",
+    "css": "dist/public/assets/css/",
+    "favicons": "dist/public/favicons/",
+    "fonts": "dist/public/assets/fonts/",
+    "js": "dist/public/assets/js/",
+    "images": {
+      "base": "dist/public/assets/images/",
+      "svg": {
+        "single": "dist/public/assets/images/svg/single/",
+        "sprite": "dist/public/assets/images/svg/sprite/",
+        "inline": "dist/resources/views/"
+      },
+      "bitmap": {
+        "cssimages": "dist/public/assets/images/cssimages/",
+        "htmlimages": "dist/public/assets/images/htmlimages/"
+      }
+    }
+  },
+  "favicon": {
+    "appName": "My App",
+    "appDescription": "This is my Application",
+    "developerName": "",
+    "developerURL": "",
+    "background": "#020307",
+    "path": "favicons",
+    "theme_color": "#020307",
+    "logging": false,
+    "online": false,
+    "icons": {
+      "android": true,
+      "appleIcon": true,
+      "appleStartup": true,
+      "coast": true,
+      "favicons": true,
+      "firefox": true,
+      "opengraph": false,
+      "twitter": false,
+      "windows": true,
+      "yandex": true
+    }
+  },
+  "svgoConfig": [
+    {
+      "cleanupIDs": false
+    },
+    {
+      "removeComments": true
+    },
+    {
+      "removeViewBox": false
+    },
+    {
+      "removeDesc": true
+    },
+    {
+      "removeUselessDefs": false
+    },
+    {
+      "removeDoctype": true
+    },
+    {
+      "removeEmptyText": true
+    },
+    {
+      "removeUnknownsAndDefaults": true
+    },
+    {
+      "removeEmptyContainers": true
+    },
+    {
+      "collapseGroups": true
+    },
+    {
+      "removeUselessStrokeAndFill": true
+    },
+    {
+      "convertStyleToAttrs": true
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "generator-mh-boilerplate": {
+    "promptValues": {
+      "authorName": "Martin Herweg",
+      "authorEmail": "martin@herweg.co"
+    }
+  }
+}
