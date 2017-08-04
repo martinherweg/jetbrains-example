@@ -2,7 +2,7 @@
 
 <script>
   export default {
-    name: 'Home',
+    name: 'Form',
     props: [],
     data() {
       return {};
@@ -13,5 +13,5 @@
     mounted() {},
     created() {},
     components: {},
-  };
+  }
 </script>

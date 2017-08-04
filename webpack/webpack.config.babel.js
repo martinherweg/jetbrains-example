@@ -19,6 +19,7 @@ import OptimizeCSSPlugin from 'optimize-css-assets-webpack-plugin';
 import Webpack2Polyfill from 'webpack2-polyfill-plugin';
 import CleanWebpackPlugin from 'clean-webpack-plugin';
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
+import Aliases from './webpack_aliases';
 
 
 const { ifProduction, ifNotProduction, ifDevelopment, ifNotDevelopment } = getIfUtils(process.env.NODE_ENV);
@@ -77,7 +78,7 @@ let chunks = [];
         inject: false,
       }
     ]
-    
+
 
 chunks_inject.forEach((chunk) => {
   const plugin = new HtmlWebpackPlugin({
@@ -140,12 +141,7 @@ export default {
       resolve(config.srcPaths.base),
       resolve('node_modules'),
     ],
-    alias: {
-'vue$': 'vue/dist/vue.esm.js',
-      'src': resolve(config.srcPaths.base),
-      '@': resolve(config.srcPaths.base),
-      modules: resolve(`${config.srcPaths.views}modules/`),
-    },
+    alias: Aliases,
   },
   module: {
     rules: [
@@ -178,7 +174,7 @@ export default {
         },
       },
     },
-    
+
       {
         test: /\.json$/,
         use: 'json-loader',

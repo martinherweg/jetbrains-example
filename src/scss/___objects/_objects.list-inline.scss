@@ -35,7 +35,6 @@ $app-list-inline-delimiter: ',\00A0' !default;
   }
 
   > .o-list_inline__item + .o-list_inline__item {
-
     &::before {
       content: '#{$app-list-inline-delimiter}';
     }
